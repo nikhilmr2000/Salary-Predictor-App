@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/predict"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="277dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="casual"
+        android:includeFontPadding="false"
+        android:text="SALARY PREDICTION"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/namel"
+        android:layout_width="307dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="111dp"
+        android:includeFontPadding="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
+            android:layout_width="321dp"
+            android:layout_height="match_parent"
+            android:background="#39937D7D"
+            android:hint="Company Name"
+            android:includeFontPadding="false"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/predict"
+        android:layout_width="150dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="52dp"
+        android:includeFontPadding="false"
+        android:text="Predict"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expl" />
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="75dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="56dp"
+        android:background="#D35050"
+        android:backgroundTint="#D34343"
+        android:backgroundTintMode="src_in"
+        android:includeFontPadding="false"
+        android:text="EXIT"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/predict"
+        app:layout_constraintTop_toBottomOf="@+id/expl" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/expl"
+        android:layout_width="305dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="60dp"
+        android:includeFontPadding="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/namel">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/exp"
+            android:layout_width="319dp"
+            android:layout_height="match_parent"
+            android:background="#39937D7D"
+            android:hint="Experience"
+            android:includeFontPadding="false"
+            android:inputType="numberSigned|numberDecimal"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/cname"
+        android:layout_width="103dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="67dp"
+        android:includeFontPadding="false"
+        android:text="Required"
+        android:textColor="#DD1B1B"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/namel" />
+
+    <TextView
+        android:id="@+id/ename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="67dp"
+        android:includeFontPadding="false"
+        android:text="Required"
+        android:textColor="#EF0A0A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expl"
+        tools:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/output"
+        android:layout_width="215dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="52dp"
+        android:background="@color/teal_200"
+        android:ems="10"
+        android:includeFontPadding="false"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/predict"
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:visibility="invisible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
